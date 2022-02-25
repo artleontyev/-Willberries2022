@@ -3,14 +3,16 @@ const getGoods = () => {
 
   const getData = () => {
     fetch('https://willberries-test-5fc10-default-rtdb.firebaseio.com/db.json')
-    .then(res => res.json())
-    .then(data => localStorage.setItem('data', (JSON.stringify(data))))
+      .then((res) => res.json())
+      .then((data) => {
+        localStorage.setItem('goods', JSON.stringify(data))
+      })
   }
 
   links.forEach(link => {
     link.addEventListener('click', (event) => {
-event.preventDefault()
-getData();
+      event.preventDefault()
+      getData();
     })
   })
 }
