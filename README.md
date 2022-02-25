@@ -1,1 +1,1 @@
-# -Willberries2022
+Интенсив "Свой Willberries JavaScript"
